@@ -5,7 +5,9 @@ const GlobalStyles = createGlobalStyle`
     v2.0 | 20110126
     License: none (public domain)
     */
-
+    body {
+        font-family: ${({theme}) => theme.fonts.body};
+    }
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
     a, abbr, acronym, address, big, cite, code,
@@ -22,8 +24,6 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         border: 0;
-        font-size: 100%;
-        font: inherit;
         vertical-align: baseline;
     }
     /* HTML5 display-role reset for older browsers */
@@ -48,6 +48,9 @@ const GlobalStyles = createGlobalStyle`
     table {
         border-collapse: collapse;
         border-spacing: 0;
+    }
+    a {
+        text-decoration: none;
     }
 `
 

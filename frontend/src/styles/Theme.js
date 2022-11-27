@@ -1,4 +1,4 @@
-export const theme = {
+const theme = {
     fonts: {
         body: "'Open Sans', sans-serif"
     },
@@ -7,7 +7,8 @@ export const theme = {
         sm: ".9rem",
         md: "1rem",
         lg: "1.25rem",
-        xl: "1.5rem"
+        xl: "1.5rem",
+        xl2: "2rem"
     },
     fontWeights: {
         light: "300",
@@ -29,3 +30,5 @@ export const theme = {
         xl2: "96rem" // 1536px
     }
 }
+
+export default theme;
