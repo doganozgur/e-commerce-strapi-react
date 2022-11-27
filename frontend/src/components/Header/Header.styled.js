@@ -2,6 +2,6 @@ import styled from "styled-components"
 
 // Styled header
 export const StyledHeader = styled.header`
-    padding: 1rem;
+    padding-block: 1rem;
     position: relative;
 `

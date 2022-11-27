@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 `
 
 // Logo
@@ -37,7 +38,7 @@ export const MobileNav = styled.nav`
     background: #fff;
     transition: all 0.3s;
     overflow-y: scroll;
-    padding: 1rem;
+    padding-block: 2rem;
     /* box-shadow: 2px 0 6px rgba(0,0,0,0.2); */
 
 `
