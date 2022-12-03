@@ -8,7 +8,7 @@ import {
   StyledFooter,
 } from "./Footer.styled";
 import { Link } from "react-router-dom";
-import { Container } from "../../styles/Utils";
+import { Container } from "../../../styles/Utils";
 
 const categories = [
   { id: 1, name: "Women" },

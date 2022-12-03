@@ -12,7 +12,7 @@ export const ImagesContainer = styled.div`
     width: 300vw;
     height: 100%;
     display: flex;
-    transition: all .8s ease;
+    transition: transform .8s ease;
 
     > img {
       width: 100vw;
@@ -38,7 +38,6 @@ export const Arrow = styled.span`
     justify-content: center;
     width: 1.125rem;
     height: 1.125rem;
-    border: 1px solid #919191a8;
     border-radius: 100vh;
     background-color: rgba(0,0,0,0.4);
     color: #919191;

@@ -18,7 +18,7 @@ import {
 import { Link } from "react-router-dom";
 import LanguageMenu from "../LanguageMenu";
 import CurrenyMenu from "../CurrencyMenu";
-import { Container } from "../../styles/Utils";
+import { Container } from "../../../styles/Utils";
 
 function DesktopMenu() {
   return (

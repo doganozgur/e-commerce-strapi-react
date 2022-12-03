@@ -3,9 +3,9 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import LangEn from "../../assets/united-kingdom.png";
-import LangTr from "../../assets/turkey.png";
-import LangDe from "../../assets/germany.png";
+import LangEn from "../../../assets/united-kingdom.png";
+import LangTr from "../../../assets/turkey.png";
+import LangDe from "../../../assets/germany.png";
 import styled from "styled-components";
 
 // Language icon

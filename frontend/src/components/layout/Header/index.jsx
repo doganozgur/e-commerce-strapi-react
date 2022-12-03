@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { Container } from "../../styles/Utils";
-import DesktopMenu from "../DesktopMenu";
-import MobileMenu from "../MobileMenu";
+import DesktopMenu from "../../controls/DesktopMenu";
+import MobileMenu from "../../controls/MobileMenu";
 import { StyledHeader } from "./Header.styled";
 
 export default function Navbar() {

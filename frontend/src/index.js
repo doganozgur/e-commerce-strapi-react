@@ -7,12 +7,12 @@ import {
 import Home from "../src/pages/Home"
 import Products from "../src/pages/Products"
 import Product from "../src/pages/Product"
-import Layout from "../src/components/Layout"
+import LayoutComponent from "../src/components/controls/LayoutComponent"
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <LayoutComponent />,
     children: [
       {
         path: "/",
