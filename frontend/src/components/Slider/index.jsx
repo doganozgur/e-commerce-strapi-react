@@ -28,12 +28,14 @@ export default function Slider() {
       ? setCurrentSlide(0)
       : currentSlide;
 
-  console.log(currentSlide);
-
   return (
     <StyledSlider>
-      <ImagesContainer>
-        <img src={data[currentSlide]} alt="" />
+      <ImagesContainer
+        style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
+      >
+        <img src={data[0]} alt="" />
+        <img src={data[1]} alt="" />
+        <img src={data[2]} alt="" />
       </ImagesContainer>
       <Arrows>
         <Arrow onClick={prevSlide}>

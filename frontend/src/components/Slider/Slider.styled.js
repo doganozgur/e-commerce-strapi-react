@@ -12,9 +12,8 @@ export const ImagesContainer = styled.div`
     width: 300vw;
     height: 100%;
     display: flex;
+    transition: all .8s ease;
 
-    transform: translateX(0vw);
-    
     > img {
       width: 100vw;
       height: 100%;
