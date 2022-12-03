@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Container } from "../../styles/Utils";
 import DesktopMenu from "../DesktopMenu";
 import MobileMenu from "../MobileMenu";
 import { StyledHeader } from "./Header.styled";

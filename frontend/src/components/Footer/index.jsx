@@ -8,6 +8,7 @@ import {
   StyledFooter,
 } from "./Footer.styled";
 import { Link } from "react-router-dom";
+import { Container } from "../../styles/Utils";
 
 const categories = [
   { id: 1, name: "Women" },
@@ -28,48 +29,50 @@ const links = [
 export default function Footer() {
   return (
     <StyledFooter>
-      <FooterTop>
-        <FooterCol>
-          <FooterColTitle>Categories</FooterColTitle>
-          <List>
-            {categories &&
-              categories.map((category) => (
-                <ListItem key={category.id}>
-                  <Link to="/">{category.name}</Link>
-                </ListItem>
-              ))}
-          </List>
-        </FooterCol>
-        <FooterCol>
-          <FooterColTitle>Links</FooterColTitle>
-          <List>
-            {links &&
-              links.map((link) => (
-                <ListItem key={link.id}>
-                  <Link to="/">{link.name}</Link>
-                </ListItem>
-              ))}
-          </List>
-        </FooterCol>
-        <FooterCol>
-          <FooterColTitle>About</FooterColTitle>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
-            nisi sed tempore commodi quis deleniti id officiis, error, laborum
-            animi assumenda hic sequi. Cum, nesciunt ipsum sint nihil iste
-            incidunt.
-          </p>
-        </FooterCol>
-        <FooterCol>
-          <FooterColTitle>Contact</FooterColTitle>
-          <p>
-            Facilis hic, voluptate suscipit sed dolore quis in totam ea atque
-            numquam perferendis. In, omnis laudantium. Laboriosam dolorem illo
-            possimus amet temporibus quidem.
-          </p>
-        </FooterCol>
-      </FooterTop>
-      <FooterBottom></FooterBottom>
+      <Container>
+        <FooterTop>
+          <FooterCol>
+            <FooterColTitle>Categories</FooterColTitle>
+            <List>
+              {categories &&
+                categories.map((category) => (
+                  <ListItem key={category.id}>
+                    <Link to="/">{category.name}</Link>
+                  </ListItem>
+                ))}
+            </List>
+          </FooterCol>
+          <FooterCol>
+            <FooterColTitle>Links</FooterColTitle>
+            <List>
+              {links &&
+                links.map((link) => (
+                  <ListItem key={link.id}>
+                    <Link to="/">{link.name}</Link>
+                  </ListItem>
+                ))}
+            </List>
+          </FooterCol>
+          <FooterCol>
+            <FooterColTitle>About</FooterColTitle>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
+              nisi sed tempore commodi quis deleniti id officiis, error, laborum
+              animi assumenda hic sequi. Cum, nesciunt ipsum sint nihil iste
+              incidunt.
+            </p>
+          </FooterCol>
+          <FooterCol>
+            <FooterColTitle>Contact</FooterColTitle>
+            <p>
+              Facilis hic, voluptate suscipit sed dolore quis in totam ea atque
+              numquam perferendis. In, omnis laudantium. Laboriosam dolorem illo
+              possimus amet temporibus quidem.
+            </p>
+          </FooterCol>
+        </FooterTop>
+        <FooterBottom></FooterBottom>
+      </Container>
     </StyledFooter>
   );
 }
