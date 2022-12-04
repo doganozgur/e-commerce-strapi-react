@@ -45,7 +45,7 @@ export default function FeaturedProducts({ type }) {
           </Paragraph>
         </Top>
         <Bottom>
-          {products?.map((product) => (
+          {products?.slice(0, 12).map((product) => (
             <Card key={product.id} product={product} />
           ))}
         </Bottom>
