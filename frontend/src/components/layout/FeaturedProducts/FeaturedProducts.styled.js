@@ -25,20 +25,14 @@ export const Bottom = styled.div`
     flex: 1;
   }
 
-  @media screen and (min-width: ${({theme}) => theme.screens.xs}) {
+  @media screen and (min-width: ${({theme}) => theme.screens.sm}) {
     flex-direction: row;
     article {
-      flex: 1 1 40%;
+      flex: 1 1 33%;
     }
   }
 
-  @media screen and (min-width: ${({theme}) => theme.screens.sm}) {
-    article {
-      flex: 1 1 30%;
-    }
-  }
-
-  @media screen and (min-width: ${({theme}) => theme.screens.md}) {
+  @media screen and (min-width: ${({theme}) => theme.screens.lg}) {
     article {
       flex: 1 1 23%;
     }
