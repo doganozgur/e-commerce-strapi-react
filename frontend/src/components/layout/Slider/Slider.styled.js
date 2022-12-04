@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 // Styled slider
-export const StyledSlider = styled.div`
+export const StyledSlider = styled.section`
     height: calc(100vh - 68.5px);
     width: 100vw;
     overflow-x: hidden;

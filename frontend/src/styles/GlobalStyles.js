@@ -52,6 +52,10 @@ const GlobalStyles = createGlobalStyle`
     a {
         text-decoration: none;
     }
+
+    section {
+        padding-bottom: 5rem;
+    }
 `
 
 export default GlobalStyles;

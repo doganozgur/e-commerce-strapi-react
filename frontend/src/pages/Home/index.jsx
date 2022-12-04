@@ -1,9 +1,12 @@
+import FeaturedProducts from "../../components/layout/FeaturedProducts";
 import Slider from "../../components/layout/Slider";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Slider />
-    </div>
+      <FeaturedProducts type="featured" />
+      {/* <FeaturedProducts type="trending" /> */}
+    </>
   );
 }
