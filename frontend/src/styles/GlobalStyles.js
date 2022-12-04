@@ -54,7 +54,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     section {
-        padding-bottom: 5rem;
+        margin-bottom: 5rem;
     }
 `
 
