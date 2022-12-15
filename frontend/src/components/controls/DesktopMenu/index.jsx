@@ -31,15 +31,15 @@ function DesktopMenu() {
           <CategoryList>
             {/* List item */}
             <CategoryListItem>
-              <Link to="/">Women</Link>
+              <Link to="/products">Women</Link>
             </CategoryListItem>
             {/* List item */}
             <CategoryListItem>
-              <Link to="/">Men</Link>
+              <Link to="/products">Men</Link>
             </CategoryListItem>
             {/* List item */}
             <CategoryListItem>
-              <Link to="/">Children</Link>
+              <Link to="/products">Children</Link>
             </CategoryListItem>
           </CategoryList>
         </Left>

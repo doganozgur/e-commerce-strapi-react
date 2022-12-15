@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding-inline: 1rem;
 `
 
 // Logo
@@ -47,6 +48,7 @@ export const NavList = styled.ul`
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
+    padding-inline: 1.5rem;
 `
 // List Item
 export const ListItem = styled.li`

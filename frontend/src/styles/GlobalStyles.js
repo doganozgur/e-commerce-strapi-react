@@ -56,6 +56,13 @@ const GlobalStyles = createGlobalStyle`
     section {
         margin-bottom: 5rem;
     }
+    /* Utility Classes */
+    .mb-4 {
+        margin-bottom: 1rem;
+    }
+    .mb-6 {
+        margin-bottom: 1.5rem;
+    } 
 `
 
 export default GlobalStyles;

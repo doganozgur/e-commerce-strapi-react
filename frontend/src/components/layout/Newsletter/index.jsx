@@ -26,7 +26,8 @@ export default function Newsletter() {
           </Left>
           <Middle>
             <Textbox type="text" placeholder="Enter your email" />
-            <Button>Join Us</Button>
+            <Button></Button>
+            {/* <Button>Join Us</Button> */}
           </Middle>
           <Right>
             <SocialList>
