@@ -23,3 +23,9 @@ export const NarrowContainer = styled.div`
         max-width: 93rem;
     }
 `
+
+export const Price = styled.span`
+    color: ${({theme}) => theme.colors.blue};
+    font-weight: ${({theme}) => theme.fontWeights.semiBold};
+    font-size: ${({theme}) => theme.fontSizes.lg};
+`

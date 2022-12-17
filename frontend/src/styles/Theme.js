@@ -19,7 +19,9 @@ const theme = {
     },
     colors: {
         black: "#000",
-        white: "#fff"
+        white: "#fff",
+        body :"#6c6c6c",
+        blue: "#49a1ff"
     },
     screens: {
         xs: "20rem", // 320px

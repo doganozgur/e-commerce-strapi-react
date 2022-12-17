@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Image, ImagesContainer, Price, Title } from "./Card.styled";
+import { Image, ImagesContainer, Price, Title } from "./Product.styled";
 
 export default function Card({ product }) {
   const { id, title, price, description, category, images } = product;

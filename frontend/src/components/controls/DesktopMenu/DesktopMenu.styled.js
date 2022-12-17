@@ -5,6 +5,7 @@ export const DesktopNav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     a {
         color: #000;
     }
@@ -59,5 +60,5 @@ export const NavIcons = styled.ul`
 `
 // Nav icon
 export const NavIcon = styled.li`
-
+    cursor: pointer;
 `

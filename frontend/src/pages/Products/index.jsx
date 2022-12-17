@@ -1,5 +1,3 @@
-import FilterByCategories from "../../components/controls/FilterByCategories";
-import FeaturedProducts from "../../components/layout/FeaturedProducts";
 import { Container } from "../../styles/Utils";
 import {
   Banner,
@@ -20,11 +18,15 @@ import {
   Slider,
 } from "@mui/material";
 import { useState } from "react";
+import ProductList from "../../components/layout/ProductList";
+import { useParams } from "react-router-dom";
 
 export default function Product() {
   const [category, setCategory] = useState(null);
   const [price, setPrice] = useState(1000);
   const [sort, setSort] = useState(null);
+
+  const { id } = useParams();
 
   // Category
   const handleCategory = (e) => setCategory(e.target.value);
@@ -87,7 +89,12 @@ export default function Product() {
           {/* Right */}
           <Right>
             <Banner src="https://picsum.photos/1200/200" alt="" />
-            <FeaturedProducts type="featured" />
+            <ProductList
+              category={category}
+              price={price}
+              sort={sort}
+              id={id}
+            />
           </Right>
         </ProductsInner>
       </Container>

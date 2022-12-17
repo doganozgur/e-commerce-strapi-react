@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
+import { useProducts } from "../../../hooks/useProducts";
 import { Container } from "../../../styles/Utils";
-import Card from "../../widgets/Card";
+import Card from "../../widgets/Product";
 import {
   Bottom,
   Paragraph,
@@ -9,23 +10,7 @@ import {
 } from "./FeaturedProducts.styled";
 
 export default function FeaturedProducts({ type }) {
-  const [products, setProducts] = useState([]);
-
-  const getProducts = async () => {
-    const url = "https://api.escuelajs.co/api/v1/products";
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
-  };
-
-  const fetchedProducts = useCallback(async () => {
-    const products = await getProducts();
-    setProducts(products);
-  }, []);
-
-  useEffect(() => {
-    fetchedProducts();
-  }, [fetchedProducts]);
+  const products = useProducts(1);
 
   const sectionTitle =
     type === "featured" ? "Featured Products" : "Trending Products";
@@ -45,9 +30,10 @@ export default function FeaturedProducts({ type }) {
           </Paragraph>
         </Top>
         <Bottom>
-          {products?.slice(0, 8).map((product) => (
-            <Card key={product.id} product={product} />
-          ))}
+          {products.length > 0 &&
+            products
+              .slice(0, 8)
+              .map((product) => <Card key={product.id} product={product} />)}
         </Bottom>
       </Container>
     </section>

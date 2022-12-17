@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     */
     body {
         font-family: ${({theme}) => theme.fonts.body};
+        color: ${({theme}) => theme.colors.body};
     }
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -62,7 +63,7 @@ const GlobalStyles = createGlobalStyle`
     }
     .mb-6 {
         margin-bottom: 1.5rem;
-    } 
+    }
 `
 
 export default GlobalStyles;

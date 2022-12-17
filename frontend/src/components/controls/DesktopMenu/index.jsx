@@ -19,8 +19,11 @@ import { Link } from "react-router-dom";
 import LanguageMenu from "../LanguageMenu";
 import CurrenyMenu from "../CurrencyMenu";
 import { Container } from "../../../styles/Utils";
+import CartBox from "../CartBox";
+import { useState } from "react";
 
 function DesktopMenu() {
+  const [isCartBoxOpen, setIsCartBoxOpen] = useState(false);
   return (
     <Container>
       <DesktopNav>
@@ -31,15 +34,15 @@ function DesktopMenu() {
           <CategoryList>
             {/* List item */}
             <CategoryListItem>
-              <Link to="/products">Women</Link>
+              <Link to="/products/1">Clothes</Link>
             </CategoryListItem>
             {/* List item */}
             <CategoryListItem>
-              <Link to="/products">Men</Link>
+              <Link to="/products/2">Electronics</Link>
             </CategoryListItem>
             {/* List item */}
             <CategoryListItem>
-              <Link to="/products">Children</Link>
+              <Link to="/products/3">Furniture</Link>
             </CategoryListItem>
           </CategoryList>
         </Left>
@@ -76,11 +79,12 @@ function DesktopMenu() {
             <NavIcon>
               <FavoriteBorderIcon />
             </NavIcon>
-            <NavIcon>
+            <NavIcon onClick={() => setIsCartBoxOpen(!isCartBoxOpen)}>
               <ShoppingCartOutlinedIcon />
             </NavIcon>
           </NavIcons>
         </Right>
+        {isCartBoxOpen && <CartBox />}
       </DesktopNav>
     </Container>
   );
