@@ -2,20 +2,30 @@ import { Link } from "react-router-dom";
 import { Image, ImagesContainer, Price, Title } from "./Product.styled";
 
 export default function Card({ product }) {
-  const { id, title, price, description, category, images } = product;
   return (
     <article>
-      <Link to={`/product/${id}`}>
+      <Link to={`/product/${product?.attributes.id}`}>
         <ImagesContainer>
-          {images?.slice(0, 2).map((image, idx) => (
-            <Image src={image} alt="" key={idx} />
-          ))}
+          <Image
+            src={
+              process.env.REACT_APP_BASE_URL +
+              product?.attributes.img.data.attributes.url
+            }
+            alt={product?.attributes.title}
+          />
+          <Image
+            src={
+              process.env.REACT_APP_BASE_URL +
+              product?.attributes.img2.data.attributes.url
+            }
+            alt={product?.attributes.title}
+          />
         </ImagesContainer>
-        <Title>{title}</Title>
+        <Title>{product?.attributes.title}</Title>
         <Price>
-          <span>${price}</span>{" "}
+          <span>${product?.attributes.price}</span>{" "}
           <span className="discount-price">
-            ${price - Math.floor(Math.random() * (70 + 30))}
+            ${product?.attributes.price - Math.floor(Math.random() * (70 + 30))}
           </span>
         </Price>
       </Link>

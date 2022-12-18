@@ -16,26 +16,17 @@ export const Top = styled.div`
 
 // Bottom
 export const Bottom = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
   gap: 2rem;
 
-  article {
-    flex: 1;
-  }
-
   @media screen and (min-width: ${({theme}) => theme.screens.sm}) {
-    flex-direction: row;
-    article {
-      flex: 1 1 33%;
-    }
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media screen and (min-width: ${({theme}) => theme.screens.lg}) {
-    article {
-      flex: 1 1 23%;
-    }
+    grid-template-columns: repeat(4, 1fr);
   }
   justify-content: center;
 `

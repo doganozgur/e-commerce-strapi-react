@@ -1,4 +1,3 @@
-import { useCallback, useEffect, useState } from "react";
 import { useProducts } from "../../../hooks/useProducts";
 import { Container } from "../../../styles/Utils";
 import Card from "../../widgets/Product";
@@ -10,8 +9,8 @@ import {
 } from "./FeaturedProducts.styled";
 
 export default function FeaturedProducts({ type }) {
-  const products = useProducts(1);
-
+  const products = useProducts(type);
+  console.log(products);
   const sectionTitle =
     type === "featured" ? "Featured Products" : "Trending Products";
 
@@ -31,9 +30,9 @@ export default function FeaturedProducts({ type }) {
         </Top>
         <Bottom>
           {products.length > 0 &&
-            products
-              .slice(0, 8)
-              .map((product) => <Card key={product.id} product={product} />)}
+            products?.map((product) => (
+              <Card key={product.id} product={product} />
+            ))}
         </Bottom>
       </Container>
     </section>

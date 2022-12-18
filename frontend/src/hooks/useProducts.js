@@ -1,22 +1,17 @@
 import { useEffect, useCallback, useState } from "react";
+import { httpGetProducts } from "./requests"
 
-export function useProducts(id) {
+export function useProducts(type) {
   const [products, setProducts] = useState([]);
 
-  const fetchedProducts = useCallback(async () => {
-    const getProducts = async () => {
-      const url = `https://api.escuelajs.co/api/v1/categories/${id}/products`;
-      const response = await fetch(url);
-      const data = await response.json();
-      return data;
-    };
-    const products = await getProducts();
-    setProducts(products);
-  }, [id]);
+  const getProducts = useCallback(async () => {
+    const fetchedProducts = await httpGetProducts(type);
+    setProducts(fetchedProducts.data.data);
+  }, [type]);
 
   useEffect(() => {
-    fetchedProducts();
-  }, [fetchedProducts]);
+    getProducts();
+  }, [getProducts]);
 
   return products;
 }
