@@ -14,6 +14,9 @@ export const ProductsInner = styled.div`
 // Left
 export const Left = styled.aside`
     flex: 1;
+    .category-checkbox > span:first-child{
+        padding: 5px;
+    }
 `
 
 // Right

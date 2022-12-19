@@ -1,6 +1,6 @@
 import Product from "../../widgets/Product";
 import styled from "styled-components";
-import { useProducts } from "../../../hooks/useProducts";
+import useProducts from "../../../hooks/useProducts";
 
 const StyledProductList = styled.section`
   display: grid;

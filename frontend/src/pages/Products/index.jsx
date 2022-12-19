@@ -19,6 +19,7 @@ import {
 import { useState } from "react";
 import ProductList from "../../components/layout/ProductList";
 import { useParams } from "react-router-dom";
+import useCategories from "../../hooks/useCategories";
 
 export default function Product() {
   const [category, setCategory] = useState(null);
@@ -26,6 +27,9 @@ export default function Product() {
   const [sort, setSort] = useState(null);
 
   const { id } = useParams();
+
+  // Fetched sub categories
+  const categories = useCategories();
 
   // Category
   const handleCategory = (e) => setCategory(e.target.value);
@@ -43,18 +47,18 @@ export default function Product() {
             {/* Filter by categories */}
             <Title>Product Categories</Title>
             <FormGroup className="mb-6">
-              <FormControlLabel
-                control={<Checkbox />}
-                label="Hat"
-                value="hat"
-                onChange={handleCategory}
-              />
-              <FormControlLabel
-                control={<Checkbox />}
-                label="Shirt"
-                value="shirt"
-                onChange={handleCategory}
-              />
+              {/* Listing categories */}
+              {categories &&
+                categories.map(({ attributes: { title }, id }) => (
+                  <FormControlLabel
+                    key={id}
+                    control={<Checkbox />}
+                    label={title}
+                    value={title.toLowerCase()}
+                    onChange={handleCategory}
+                    className="category-checkbox"
+                  />
+                ))}
             </FormGroup>
             {/* Filter by price */}
             <Title>Filter by Price</Title>

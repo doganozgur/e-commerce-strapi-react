@@ -10,3 +10,14 @@ export const httpGetProducts = async (type) => {
         console.error(err);
     }
 };
+
+export const httpGetCategories = async() => {
+    try{
+        const data = await axios.get(process.env.REACT_APP_API_URL + `/sub-categories`, {
+            headers: { Authorization: "bearer " + process.env.REACT_APP_API_TOKEN}
+        })
+        return data;
+    } catch(err) {
+        console.error(err)
+    }
+}

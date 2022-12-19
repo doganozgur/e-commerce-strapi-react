@@ -8,6 +8,10 @@ export const Gallery = styled.div`
     grid-template-columns: repeat(1, minmax(1,1fr));
     grid-gap: 1rem;
 
+    figure {
+        position: relative;
+    }
+
     @media screen and (min-width: ${({theme}) => theme.screens.sm}) {
 
         grid-template-columns: repeat(8, 1fr);
@@ -69,4 +73,19 @@ export const Image = styled.img`
     height: 100%;
     object-fit: cover;
 `
-
+// Categort title
+export const CategoryTitle = styled.span`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-weight: ${({theme}) => theme.fontWeights.bold};
+    text-transform: capitalize;
+    color: #423c3c;
+    background: rgba(255, 255, 255, .6);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`

@@ -1,4 +1,4 @@
-import { useProducts } from "../../../hooks/useProducts";
+import useProducts from "../../../hooks/useProducts";
 import { Container } from "../../../styles/Utils";
 import Card from "../../widgets/Product";
 import {
@@ -10,7 +10,6 @@ import {
 
 export default function FeaturedProducts({ type }) {
   const products = useProducts(type);
-  console.log(products);
   const sectionTitle =
     type === "featured" ? "Featured Products" : "Trending Products";
 

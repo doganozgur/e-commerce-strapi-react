@@ -1,7 +1,7 @@
 import { useEffect, useCallback, useState } from "react";
 import { httpGetProducts } from "./requests"
 
-export function useProducts(type) {
+export default function useProducts(type) {
   const [products, setProducts] = useState([]);
 
   const getProducts = useCallback(async () => {

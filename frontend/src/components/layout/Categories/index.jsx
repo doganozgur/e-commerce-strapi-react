@@ -1,35 +1,25 @@
 import { Container } from "../../../styles/Utils";
-import { Gallery, Image } from "./Categories.styled";
+import { CategoryTitle, Gallery, Image } from "./Categories.styled";
+import useCategories from "../../../hooks/useCategories";
+import { Link } from "react-router-dom";
 
 export default function Categories() {
+  const categories = useCategories();
+  console.log(categories);
   return (
     <section>
       <Container>
         <Gallery>
-          <figure className="gallery-item--1">
-            <Image src="https://picsum.photos/id/12/500/600" alt="" />
-          </figure>
-          <figure className="gallery-item--2">
-            <Image src="https://picsum.photos/id/13/500/600" alt="" />
-          </figure>
-          <figure className="gallery-item--3">
-            <Image src="https://picsum.photos/id/17/500/600" alt="" />
-          </figure>
-          <figure className="gallery-item--4">
-            <Image src="https://picsum.photos/id/19/500/600" alt="" />
-          </figure>
-          <figure className="gallery-item--5">
-            <Image src="https://picsum.photos/id/23/500/600" alt="" />
-          </figure>
-          <figure className="gallery-item--6">
-            <Image src="https://picsum.photos/id/25/500/600" alt="" />
-          </figure>
-          <figure className="gallery-item--7">
-            <Image src="https://picsum.photos/id/28/500/600" alt="" />
-          </figure>
-          <figure className="gallery-item--8">
-            <Image src="https://picsum.photos/id/34/500/600" alt="" />
-          </figure>
+          {/* List categories */}
+          {categories &&
+            categories.slice(0, 8).map(({ attributes: { title }, id }) => (
+              <figure className={`gallery-item--${id}`} key={id}>
+                <Link to="/">
+                  <CategoryTitle>{title}</CategoryTitle>
+                </Link>
+                <Image src="https://picsum.photos/id/12/500/600" alt="" />
+              </figure>
+            ))}
         </Gallery>
       </Container>
     </section>
